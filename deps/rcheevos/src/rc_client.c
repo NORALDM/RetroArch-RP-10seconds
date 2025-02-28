@@ -4701,7 +4701,7 @@ static void rc_client_ping(rc_client_scheduled_callback_data_t* callback_data, r
     client->callbacks.server_call(&request, rc_client_ping_callback, client, client);
   }
 
-  callback_data->when = now + 120 * 1000;
+  callback_data->when = now + 10 * 1000;
   rc_client_schedule_callback(client, callback_data);
 }
 
